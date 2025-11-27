@@ -36,4 +36,7 @@ jobs:
           echo test, and deploy your project.
           echo ${{ github.ref == 'refs/heads/main' && 'value_for_main_branch' || 'value_for_other_branches' }}
           echo ${{ github.ref_name == 'main' && 'prod' || (github.ref_name == 'develop' && 'nonprod' || 'dev') }}
+      - name: ${{ github.ref_name == 'main' && 'prod' || (github.ref_name == 'develop' && 'nonprod' || 'dev') }}
+        run: |
+          echo ${{ github.ref_name == 'main' && 'prod' || (github.ref_name == 'develop' && 'nonprod' || 'dev') }}
 
