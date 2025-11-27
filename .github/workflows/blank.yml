@@ -38,5 +38,5 @@ jobs:
           echo ${{ github.ref_name == 'main' && 'prod' || (github.ref_name == 'develop' && 'nonprod' || 'dev') }}
       - name: ${{ github.ref_name == 'main' && 'prod' || (github.ref_name == 'develop' && 'nonprod' || 'dev') }}
         run: |
-          echo ${{ github.ref_name == 'main' && 'prod' || (github.ref_name == 'develop' && 'nonprod' || 'dev') }}
+          echo ${{ github.ref_name == 'main' && 'prod' || (github.ref_name == 'develop' && 'nonprod') }}
 
